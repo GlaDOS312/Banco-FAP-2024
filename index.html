@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco</title>
-</head>
-<body>
-    
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+<title>Tutorial de Alert em JavaScript - Linha de Código</title>
 <script>
 
-alert("Olá Mundo")
+    let numeroContas = 0
+    let novaConta = []
+
+    function criarConta() {
+        
+        novaConta.push(prompt("Digite seu nome"))
+        novaConta.push(prompt("Digite sua data de nascimento"))
+        novaConta.push(prompt("Digite seu telefone"))
+        novaConta.push(++numeroContas)
+        novaConta.push(1000)
+        
+        numeroContas.push(novaConta)
+        
+    }
+
+    function inserir() {}
+
+    function transferir() {}
+
+    function exibir() {
+
+        let conta = parseInt(prompt("Digite o número da conta"))
+
+        for (let i = 0; i < novaConta.length; i++) {
+            for(let j = 0; j < novaConta[i].length; j++) {
+                if (novaConta[i][j] === conta) {
+                    alert(novaConta[i])
+                    return
+                }
+            }
+        }
+
+        alert("Você não possui conta")
+    }
+    
+    function remover() {}
+
+    function debitar() {
+
+        let verif = parseInt(prompt("Digite o número da sua conta"))
+
+        if(verif === novaConta) {
+
+
+        }
+        
+    }
+
+
 
 </script>
+</head>
+<body>
+
+<input type="button" onclick= "criarConta()" value="Criar conta"/>
+<input type="button" onclick= "exibir()" value="Exibir"/>
 
 </body>
-</html>
+</html></div>
