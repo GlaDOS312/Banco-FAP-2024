@@ -29,16 +29,16 @@
 
         let conta = parseInt(prompt("Digite o número da conta"))
 
-        for (let i = 0; i < novaConta.length; i++) {
-            for(let j = 0; j < novaConta[i].length; j++) {
-                if (novaConta[i][j] === conta) {
-                    alert(novaConta[i])
+        for (let i = 0; i < numeroContas.length; i++) {
+            for(let j = 0; j < numeroContas[i].length; j++) {
+                if (numeroContas[i][j] === conta) {
+                    alert(numeroContas[i])
                     return
                 }
             }
         }
 
-        alert("Você não possui conta")
+        alert("Você não possui conta.")
     }
     
     function remover() {}
@@ -48,10 +48,13 @@
         let verif = parseInt(prompt("Digite o número da sua conta"))
 
         if(verif === novaConta) {
-
-
+            for(let i = 0; i < numeroContas; i++) {
+                for(let j = 0; j = novaConta[i]; j++) {
+                    alert("Você tem" + novaConta[4] + ", gostaria de debitar quanto?")
+                }
+            }
         }
-        
+        alert("Você não possui conta.")
     }
 
 
@@ -62,6 +65,8 @@
 
 <input type="button" onclick= "criarConta()" value="Criar conta"/>
 <input type="button" onclick= "exibir()" value="Exibir"/>
+<input type="button" onclick= "debitar()" value="Debitar"/>
 
 </body>
-</html></div>
+</html>
+</div>
