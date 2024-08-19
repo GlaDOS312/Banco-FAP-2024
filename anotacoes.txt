@@ -11,15 +11,15 @@ Todas as funções precisarão de um botão para ser executado {prompt}.
 
 Funções: Inserir, Transferir, Exibir, Remover e Debitar.
 
-- Inserir: Irá solicitar nome, data de nascimento e telefone e irá criar a conta para o usuário.
+- ~~Inserir~~: Irá solicitar nome, data de nascimento e telefone e irá criar a conta para o usuário.
 
 - Transferir: Irá pedir a conta de destino, a conta de origem e o valor da transferência.
 
-- Exibir: Irá pedir a conta e exibir todos os dados de cada conta cadastrada.
+- ~~Exibir~~: Irá pedir a conta e exibir todos os dados de cada conta cadastrada.
 
-- Remover: Irá pedir a conta a ser removida e irá remover a conta da matrix.
+- ~~Remover~~: Irá pedir a conta a ser removida e irá remover a conta da matrix.
 
-- Debitar: Irá pedir a conta e o valor a ser debitado.
+- ~~Debitar~~: Irá pedir a conta e o valor a ser debitado.
 
 
 ** Detalhes **
