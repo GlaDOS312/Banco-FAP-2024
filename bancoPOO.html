@@ -28,6 +28,8 @@
             }
 
             creditar(valor) {
+                this.saldo += valor;
+                alert("Novo Valor: " + this.saldo);
 
             }
 
@@ -58,7 +60,7 @@
                     valido = true
                 }
             })
-            
+
             if(!valido)
             alert("Conta Inválida!")
         }
