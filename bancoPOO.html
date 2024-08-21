@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <script>
+
+        let numContas = 1
+        let contas = []
+
+        class contaBancaria {
+
+            constructor(nome, telefone, dataDeNasc, saldo, numConta) {
+                this.nome = nome
+                this.telefone = telefone
+                this.dataDeNasc = dataDeNasc
+                this.saldo = saldo
+                this.numConta = numConta
+            }
+
+            exibir() {
+                alert("Nome: " + this.nome + ", Telefone: " + this.telefone + ", Data de Nascimento: "
+                + this.dataDeNasc + ", Saldo: " + this.saldo + " e o Número da Conta: " + this.numConta)
+
+            }
+
+            creditar(valor) {
+
+            }
+
+            debitar(valor) {
+                if (this.saldo >= valor) {
+                    this.saldo -= valor
+                    alert("Seu saldo atual é de: " + this.saldo)
+                }
+            }
+        }
+
+        function criarConta() {
+            nome = prompt("Qual seu nome?")
+            telefone = prompt("Qual seu número de telefone?")
+            dataDeNasc = prompt("Qual sua data de nascimento")
+
+            contas.push(new contaBancaria(nome, telefone, dataDeNasc, 1000, numContas))
+            numContas++
+        }
+
+        function Exibir() {
+            let numConta = parseInt(prompt("Insira o número da conta: "))
+            let valido = false
+            contas.forEach(conta => {
+                if(conta.numConta == numContas)
+                {
+                    conta.Exibir()
+                    valido = true
+                }
+            })
+            
+            if(!valido)
+            alert("Conta Inválida!")
+        }
+
+
+    </script>
+</body>
+
+<input type="button" onclick="CriarConta()" value="Criar conta"/>
+<input type="button" onclick="Exibir()" value="Exibir Conta"/>
+
+</html>

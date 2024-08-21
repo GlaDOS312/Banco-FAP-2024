@@ -1,0 +1,19 @@
+Seguindo o exemplo abordado na aula, faça um programa que manipule uma conta bancária.
+
+
+O programa deve ter as seguintes funcionalidades/métodos:
+
+depositar
+sacar
+fazerEmprestimo
+* verificarSaldo *
+* mostrarLimite *
+
+
+O programa deve mostrar:
+
+Saldo inicial
+O saldo após um deposito de: 500
+O saldo após um saque de: 200
+O saldo após um empréstimo de: 500
+O limite da conta
