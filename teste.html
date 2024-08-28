@@ -19,11 +19,11 @@
                 
                 contas.push(NovaConta)
 
-                alert("Sua conta foi criada com sucesso!" + NovaConta)  
+                alert("Sua conta foi criada com sucesso! " + NovaConta)  
             }
 
             function Exibir(){
-                let NumDaConta = parseInt(prompt("digite o número da conta:"))
+                let NumDaConta = parseInt(prompt("Digite o número da conta:"))
                 
                 for (let i = 0; i<contas.length; i++){
                     for (let j=0; j<contas[i].length; j++){
@@ -43,13 +43,14 @@
                             if (contas[i][j] == PessoalConta) {
 
                                 let valor = parseFloat(prompt("Digite o valor a ser debitado:"))
+                                
                                 if (valor > 0 && valor <= 1000) { /* conferir se o valor é válido*/
                                     for (let i = 0; i < contas.length; i++) {
                                         for (let j = 0; j < contas[i].length; j++) {
                                             if (contas[i][j] == 1000) {
                                                 let valAtual = 1000 - valor
 
-                                                alert("o saldo atual da sua conta é:" + valAtual)
+                                                alert("O saldo atual da sua conta é: " + valAtual)
                                                 return
                                             }
                                         }
@@ -65,15 +66,56 @@
                     alert("Você não possui conta.")
                 }
 
+                function Remover () {
+                    let NumDaConta = parseInt(prompt("Digite o número da conta:"))
 
+                    for (let i = 0; i<contas.length; i++){
+                        for (let j=0; j<contas[i].length; j++){
+                            if (contas [i][j] == NumDaConta){
+                                alert ("Você tem certeza que gostaria de remover " + contas[i] + "?")
+                                return
+                            }
+                            else {
+                                contas.pop()
+                                alert("Sua conta foi removida!")
+                                return
+                            }
+                        }
+                    }
+                    alert("Essa conta não existe")
+                }
 
+                function Transferir () {
+
+                    let PessoalConta = parseInt(prompt("Digite o número da primeira conta:"))
+                    let PessoalConta1 = parseInt(prompt("Digite o número da segunda conta:"))
+
+                    for (let i = 0; i < contas.length; i++) { /* conferir se a conta 1 existe*/
+                        for (let j = 0; j < contas[i].length; j++) {
+                            if (contas[i][j] == PessoalConta) {
+                                
+                                for (let i = 0; i < contas.length; i++) { /* conferir se a conta 2 existe*/
+                                    for (let j = 0; j < contas[i].length; j++) {
+                                        if (contas[i][j] == PessoalConta1) {
+                                            
+                                        }
+                                    }
+                                }
+                                alert("A segunda conta não existe.")
+                            }
+                            alert("A primeira conta não existe")
+                        }
+                    }
+                    alert("Nenhuma das contas existem.")
+                }
         </script>
     </head>
     
     <body>
-        <input type="button" onclick="CriarConta()" value="Criar conta" />
-        <input type="button" onclick="Exibir()" value="Exibir" />
-        <input type="button" onclick="Debitar()" value="Debitar" />
+        <input type="button" onclick="CriarConta()" value="Criar conta"/>
+        <input type="button" onclick="Exibir()" value="Exibir conta"/>
+        <input type="button" onclick="Debitar()" value="Debitar na conta"/>
+        <input type="button" onclick="Remover()" value="Remover conta"/>
+        <input type="button" onclick="Transferir()" value="Transferir para outra conta"/>
     </body>
-    
     </html>
